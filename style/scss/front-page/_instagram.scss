@@ -1,0 +1,199 @@
+@use '../setting/base' as *;
+@use '../setting/variable' as *;
+@use '../setting/mixin' as *;
+
+
+.insta-bg-top {
+    background-image: url("../../images/background/instagram/top-insta-high1440.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    @include pc {
+        background-image: url("../../images/background/instagram/top-insta-high1024.jpg");
+    }
+    @include tablet {
+        background-image: url("../../images/background/instagram/top-insta-high768.jpg");
+    }
+}
+.insta-bg-bottom {
+    background-image: url("../../images/background/instagram/top-insta-bottom1440.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 180px;
+    @include pc {
+        background-image: url("../../images/background/instagram/top-insta-bottom1024.jpg");
+    }
+    @include tablet {
+        background-image: url("../../images/background/instagram/top-insta-bottom768.jpg");
+        height: 80px;
+    }
+    @include sp {
+        background-image: url("../../images/background/instagram/top-insta-bottom375.jpg");
+    }
+}
+
+
+.instagram {
+    margin-top: -100px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+    overflow: hidden;
+    @include tablet {
+        margin-top: -120px;
+    }
+    .section-title-shadow {
+        text-align: center;
+        font-size: 10.0rem;
+        font-weight: 900;
+        letter-spacing: 0.02em;
+        line-height: 86px;
+        position: relative;
+        @include tablet {
+            font-size: 7rem;
+        }
+        @include sp {
+            font-size: 4.2rem;
+        }
+    }
+    .section-title-shadow::before {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        color: $color--white;
+        -webkit-text-stroke: 3px black;
+        text-shadow: 4px 4px 2px $color--green; /* 緑のシャドウ */
+        font-size: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+        padding: inherit;
+        @include tablet {
+            font-size: 7rem;
+            -webkit-text-stroke: 2px black;
+            text-shadow: 3px 3px 1px $color--green; /* 緑のシャドウ */    
+        }
+        @include sp {
+            font-size: 4.2rem;
+            -webkit-text-stroke: 2px black;
+            text-shadow: 3px 3px 1px $color--green; /* 緑のシャドウ */    
+        }
+    }
+    .instagram-link-container {
+        display: flex;
+        justify-content: flex-end;
+        margin: 30px 160px 30px 0;
+        @include tablet {
+            display: none;
+        }
+        .instagram-link {
+            display: inline-block;
+            padding: 5px 0;
+            font-size: 1.6rem;
+            font-weight: 700;
+            line-height: 23px;
+            text-align: left;
+            border-bottom: 3px solid #FEEF44;
+            &:hover {
+                border-bottom: 1px solid #000;
+                background-color: $color--yellow;
+                border-radius: 5px 5px 0 0;
+                transition: all 0.3s ease-out;
+            }
+            a {
+                span::before {
+                    content: "";
+                    display: inline-block;
+                    width: 36px;
+                    height: 5px;
+                    background-image: url("../../images/top/follow-us-arrow.png");
+                    background-size: contain;
+                    vertical-align: middle;
+                    margin-left: 16px;
+                }
+                span::after {
+                    content: "";
+                    display: inline-block;
+                    width: 18px;
+                    height: 18px;
+                    background-image: url("../../images/icon/instagram.png");
+                    background-size: contain;
+                    vertical-align: middle;
+                    margin-left: 16px;
+                } 
+            }
+        }            
+    }
+    .instagram-link-container-tablet {
+        display: none;
+        @include tablet {
+            display: block;
+            text-align: center;
+        }
+        .instagram-link-tablet {
+            display: inline-block;
+            padding: 5px 0;
+            font-size: 1.6rem;
+            font-weight: 700;
+            line-height: 23px;
+            border-bottom: 3px solid #FEEF44;
+            &:hover {
+                border-bottom: 1px solid #000;
+                background-color: $color--yellow;
+                border-radius: 5px 5px 0 0;
+                transition: all 0.3s ease-out;
+            }
+            a {
+                span::before {
+                    content: "";
+                    display: inline-block;
+                    width: 36px;
+                    height: 5px;
+                    background-image: url("../../images/top/follow-us-arrow.png");
+                    background-size: contain;
+                    vertical-align: middle;
+                    margin-left: 16px;
+                }
+                span::after {
+                    content: "";
+                    display: inline-block;
+                    width: 18px;
+                    height: 18px;
+                    background-image: url("../../images/icon/instagram.png");
+                    background-size: contain;
+                    vertical-align: middle;
+                    margin-left: 16px;
+                } 
+            }
+        }
+    }
+    .insta-img-container {
+        text-align: center;
+        width: max-content;
+        overflow: hidden;
+        margin-left: calc(50% - 1440px/2);
+        @include tablet {
+            width: 740px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+        @include sp {
+            width: 100%;
+            margin: 0;
+        }
+        img {
+            object-fit: cover;
+            width: 280px;
+            height: 280px;
+            @include tablet {
+                width: 146px;
+                height: 146px;
+            }
+            @include sp {
+                width: 114px;
+                height: 118px;
+            }
+        }
+    }
+}

@@ -1,0 +1,244 @@
+@use "../scss/setting/mixin" as *;
+@use "../scss/setting/variable" as *;
+
+footer {
+  // padding-top: 30px;
+  .footer-high {
+    padding: 30px 0;
+    border-bottom: 2px solid #000;
+    @include tablet {
+      border-bottom: none;
+      background-color: $color--lightblue;
+    }
+    &-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include sp {
+        flex-direction: column;
+      }
+      li {
+        background-color: $color--white;
+        width: 360px;
+        height: 78px;
+        border: 1px solid #000;
+        @include tablet {
+          width: 310px;
+          height: 60px;
+        }
+        a {
+          .list-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 31px;
+            text-align: center;
+            border-bottom: 2px solid $color--yellow;
+            margin: 4px 27px;
+            @include tablet {
+              font-size: 2rem;
+              font-weight: 500;
+              line-height: 28px;
+              margin: 0 25px 2px;
+            }
+          }
+          .text {
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: 23px;
+            text-align: center;
+            padding: 4px 0;
+            @include tablet {
+              font-size: 1.4rem;
+              font-weight: 400;
+              line-height: 20px;
+            }
+            &::after {
+              content: "";
+              display: inline-block;
+              width: 18px;
+              height: 18px;
+              background-image: url("../../images/icon/new-window-icon.png");
+              background-size: contain;
+              vertical-align: middle;
+              margin-left: 16px;
+              @include tablet {
+                width: 12px;
+                height: 12px;
+              }
+            }
+          }
+        }
+        &:hover {
+          border-bottom: 1px solid #000;
+          background-color: $color--yellow;
+          transition: all 0.3s ease-out;
+        }
+      }
+      li:first-of-type {
+        border-radius: 20px 0px 0px 20px;
+        @include tablet {
+          border-radius: 8px;
+          margin-right: 12px;
+        }
+        @include sp {
+          margin-right: 0;
+          margin-bottom: 12px;
+        }
+      }
+      li:last-of-type {
+        border-radius: 0px 20px 20px 0px;
+        border-left: none;
+        @include tablet {
+          border-radius: 8px;
+          border: 1px solid #000;
+        }
+      }
+    }
+  }
+  .footer-low {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 10%;
+    @include tablet {
+      justify-content: center;
+    }
+    .footer-flex-left {
+      text-align: center;
+      .logo {
+        width: 290px;
+        @include tablet {
+          width: 242px;
+        }
+        @include sp {
+          width: 170px;
+        }
+      }
+      address {
+        .address {
+          font-style: normal;
+          font-size: 1.6rem;
+          font-weight: 500;
+          line-height: 23px;
+          text-align: center;
+          padding: 25px 0;
+          @include sp {
+            font-size: 1.2rem;
+            line-height: 20px;
+          }
+          span::before {
+            content: "";
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            background-image: url("../../images/icon/tel-icon.png");
+            background-size: contain;
+            vertical-align: middle;
+            margin-right: 4px;
+            @include sp {
+              width: 10px;
+              height: 8px;
+              margin-right: 2px;
+              margin-bottom: 2px;
+            }
+          }
+        }
+      }
+    }
+    &-links {
+      display: flex;
+      justify-content: space-around;
+      width: 50vw;
+      padding: 50px 0;
+      @include tablet {
+        display: none;
+      }
+      li {
+        padding: 6px 0;
+        a {
+          font-size: 1.6rem;
+          font-weight: 700;
+          line-height: 23px;
+        }
+        ul {
+          .under-pages-links {
+            a {
+              font-size: 1.4rem;
+              line-height: 20px;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+    .instagram-link-container {
+      display: flex;
+      justify-content: flex-end;
+      @include tablet {
+        display: none;
+      }
+      .instagram-link {
+        display: inline-block;
+        padding: 5px 0;
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 23px;
+        text-align: left;
+        border-bottom: 3px solid #feef44;
+        &:hover {
+          border-bottom: 1px solid #000;
+          background-color: $color--yellow;
+          border-radius: 5px 5px 0 0;
+          transition: all 0.3s ease-out;
+        }
+        a {
+          span::before {
+            content: "";
+            display: inline-block;
+            width: 36px;
+            height: 5px;
+            background-image: url("../../images/top/follow-us-arrow.png");
+            background-size: contain;
+            vertical-align: middle;
+            margin-left: 16px;
+          }
+          span::after {
+            content: "";
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            background-image: url("../../images/icon/instagram.png");
+            background-size: contain;
+            vertical-align: middle;
+            margin-left: 16px;
+          }
+        }
+      }
+    }
+  }
+  .copyright {
+    height: 52px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 52px;
+    color: $color--white;
+    background-color: #000;
+    text-align: center;
+    @include sp {
+      height: 32px;
+      font-size: 0.8rem;
+      line-height: 11px;
+      line-height: 32px;
+    }
+  }
+}
+
+footer > .bg-white {
+  background-color: $color--white;
+  border-bottom: 2px solid #000;
+}
+
+footer > .bg-beige {
+  @include tablet {
+    background-color: $color--beige;
+  }
+}

@@ -1,0 +1,26 @@
+@use '../../scss/setting/mixin' as *;
+@use '../../scss/setting/variable' as *;
+
+.section-title{
+    color: #fff;
+    -webkit-text-stroke: 7px #000;
+    paint-order: stroke fill;
+    font-size: 10.0rem;
+    font-weight: 700;
+    line-height: 86px;
+    padding-bottom: 24px;
+    letter-spacing: 0.03em;
+    @include tablet {
+        -webkit-text-stroke: 4px #000;
+        font-size: 7rem;
+        line-height: 70px;
+        padding-bottom: 8px;
+    }
+    @include sp {
+        font-size: 4rem;
+        line-height: 40px;
+        letter-spacing: 0.03em;
+        padding-bottom: 4px;
+        text-align: left;
+    }
+}

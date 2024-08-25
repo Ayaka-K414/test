@@ -1,0 +1,28 @@
+// ==================================================================================
+// メディアクエリ
+// ==================================================================================
+$sp: 767px;
+$tablet: 1023px;
+$pc: 1439px;
+
+
+// 767以下
+@mixin sp {
+    @media screen and (max-width: $sp){
+        @content;
+    }
+}
+
+// 1023以下
+@mixin tablet {
+    @media screen and (max-width: $tablet){
+        @content;
+    }
+}
+
+// 1439以下
+@mixin pc {
+    @media screen and (max-width: $pc){
+        @content;
+    }
+}

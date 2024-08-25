@@ -1,0 +1,155 @@
+@use '../setting/base' as *;
+@use '../setting/variable' as *;
+@use '../setting/mixin' as *;
+
+
+.contact-bg-top {
+    background-image: url("../../images/background/contact/contact-high1440.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    @include pc {
+        background-image: url("../../images/background/contact/contact-high1024.jpg");
+        height: 240px;
+    }
+    @include tablet {
+        background-image: url("../../images/background/contact/contact-high768.jpg");
+        height: 180px;
+    }
+    @include sp {
+        background-image: url("../../images/background/contact/contact-high375.jpg");
+        height: 200px;
+    }
+}
+.contact-bg-bottom {
+    background-image: url("../../images/background/contact/contact-bottom1440.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100px;
+    @include pc {
+        background-image: url("../../images/background/contact/contact-bottom1024.jpg");
+        height: 100px;
+    }
+    @include tablet {
+        background-image: url("../../images/background/contact/contact-bottom1024.jpg");
+        height: 80px;
+    }
+    @include sp {
+        background-image: url("../../images/background/contact/contact-bottom375.jpg");
+        height: 50px;
+    }
+}
+.bgc-beige {
+    padding-bottom: 100px;
+    @include tablet {
+        padding-bottom: 30px;
+    }
+}
+
+
+.contact {
+    margin-top: -280px;
+    @include pc {
+        margin-top: -160px;
+    }
+    @include tablet {
+        margin-top: -120px;
+    }
+    .section-title-shadow {
+        text-align: center;
+        font-size: 10.0rem;
+        font-weight: 900;
+        letter-spacing: 0.02em;
+        line-height: 86px;
+        position: relative;
+        @include tablet {
+            font-size: 7rem;
+        }
+        @include sp {
+            font-size: 4.2rem;
+        }
+    }
+    .section-title-shadow::before {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        color: $color--white;
+        -webkit-text-stroke: 3px black;
+        text-shadow: 4px 4px 2px $color--green; /* 緑のシャドウ */
+        font-size: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+        padding: inherit;
+        @include tablet {
+            font-size: 7rem;
+            -webkit-text-stroke: 2px black;
+            text-shadow: 3px 3px 1px $color--green; /* 緑のシャドウ */    
+        }
+        @include sp {
+            font-size: 4.2rem;
+            -webkit-text-stroke: 2px black;
+            text-shadow: 3px 3px 1px $color--green; /* 緑のシャドウ */    
+        }
+    }
+    .section-subtitle {
+        text-align: center;
+        padding-bottom: 50px;
+        @include sp {
+            padding-bottom: 30px;
+        }
+    }
+    .contact-info-container {
+        dl {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include sp {
+                flex-direction: column;
+                align-items: flex-start;
+                width: 270px;
+                margin: 0 auto;
+            }
+            div {
+                margin-right: 100px;
+                @include tablet {
+                    margin-right: 65px;
+                }
+                @include sp {
+                    margin-right: 0;
+                    margin-bottom: 10px;
+                }
+                dt {
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    line-height: 23px;
+                    @include sp {
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        line-height: 17.38px;
+                    }
+                }
+                dd {
+                    font-size: 2.4rem;
+                    font-weight: 500;
+                    line-height: 34px;
+                    @include sp {
+                        font-size: 2.0rem;
+                        line-height: 28.96px;
+                    }
+                }
+            }
+            div:last-of-type {
+                margin-right: 0;
+                dd {
+                    border-bottom: 3px solid $color--yellow;
+                }
+            }
+        }
+    }
+}
+
+#href-contact {
+    scroll-margin-top: 380px;
+}

@@ -1,0 +1,66 @@
+@use '../setting/base' as *;
+@use '../setting/variable' as *;
+@use '../setting/mixin' as *;
+
+
+.company {
+    width: 1168px;
+    margin: 0 auto;
+    padding-bottom: 155px;
+    @include pc {
+        width: 100%;
+        padding: 0 16px 155px;
+    }
+    @include tablet {
+        padding: 0 32px 155px;
+    }
+    @include sp {
+        padding: 0 12px 80px;
+    }
+    .company-container {
+        dl {
+            width: 960px;
+            height: 500px;
+            margin: 0 auto;
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 26px;
+            @include tablet {
+                width: 100%;
+            }
+            @include sp {
+                font-size: 1.4rem;
+                line-height: 20.27px;
+                text-align: left;
+            }
+            div {
+                display: flex;
+                border-bottom: 1px solid #545454;
+                padding: 24px 0;
+                @include sp {
+                    padding: 16px 0;
+                }
+            }
+            dt {
+                width: 160px;
+                @include sp {
+                    min-width: 90px;
+                }
+            }
+            dd {
+                width: 800px;
+                @include sp {
+                    min-width: 260px;
+                }
+                .text-newline {
+                    @include sp {
+                    display: block;
+                    }
+                }
+                .space {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}

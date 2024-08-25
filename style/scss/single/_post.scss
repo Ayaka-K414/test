@@ -1,0 +1,238 @@
+@use '../setting/base' as *;
+@use '../setting/variable' as *;
+@use '../setting/mixin' as *;
+
+
+main {
+    padding-top: 173px;
+    @include tablet {
+        padding-top: 133px;
+    }
+    @include sp {
+        padding-top: 83px;
+    }
+}
+
+article {
+    background-color: $color--white;
+    padding-top: 70px;
+    width: 1000px;
+    margin: 0 auto;
+    @include tablet {
+        width: 695px;
+    }
+    @include sp {
+        margin: 0 auto;
+        padding: 50px 0 50px;
+        width: 360px;
+    }
+    .title {
+        padding-left: 66px;
+        padding-bottom: 50px;
+        @include tablet {
+            padding-left: 0;
+        }
+        .category {
+            display: flex;
+            padding-bottom: 30px;
+            .category-title {
+                font-size: 2.4rem;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: 0.02em;
+                padding-right: 10px;
+            }
+            p {
+                font-size: 1.8rem;
+                font-weight: 500;
+                line-height: 26px;
+            }
+        }
+        .year-month {
+            font-size: 1.6rem;
+            line-height: 23px;
+            margin-right: 20px;
+        }
+        .tag {
+            font-size: 1.6rem;
+            line-height: 23px;
+            text-align: center;
+            background-color: $color--green;
+        }
+        .title-text {
+            font-size: 2.4rem;
+            line-height: 34px;
+            padding-top: 10px;
+        }
+    }
+    .img-container {
+        @include sp {
+            width: 360px;
+            margin: 0 auto;
+        }
+        .img-contents {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            padding-right: 66px;
+            @include tablet {
+                display: block;
+                padding-right: 0;
+            }
+            .vertical-title {
+                writing-mode: vertical-rl;
+                text-orientation: sideways;
+                transform: rotate(180deg);
+                height: 276px;
+                color: #fff;
+                -webkit-text-stroke: 4px rgba($color: #6E6E6EB2, $alpha: 0.7);
+                paint-order: stroke fill;
+                font-size: 3.2rem;
+                line-height: 46px;
+                letter-spacing: 0.04em;
+                font-weight: 700;
+                text-align: right;
+                padding: 0 0 0 20px;
+                @include tablet {
+                    writing-mode: horizontal-tb;
+                    text-orientation: mixed;
+                    transform: none;
+                    height: auto;
+                    padding: 0 0 8px 0;
+                    text-align: left;
+                }
+            }
+            .before-img ,.after-img {
+                @include sp {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }        
+                img {
+                    width: 420px;
+                    height: 420px;
+                    border-radius: 8px;
+                    margin-right: 20px;
+                    object-fit: cover;
+                    @include tablet {
+                        width: 335px;
+                        height: 335px;
+                    }
+                    @include sp {
+                        margin-right: 0;
+                        margin-bottom: 8px;
+                    }
+                }
+                img:last-of-type {
+                    margin-right: 0;
+                }
+            }
+            .process-img {
+                text-align: center;
+                img {
+                    width: 276px;
+                    height: 276px;
+                    border-radius: 8px;
+                    margin-right: 16px;
+                    object-fit: cover;
+                    @include tablet {
+                        width: 220px;
+                        height: 220px;
+                        margin-right: 15px;
+                    }
+                    @include sp {
+                        width: 108px;
+                        height: 108px;
+                        margin-right: 5px;
+                    }
+                }
+                img:last-of-type {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    .text-container {
+        margin: 0 auto;
+        padding: 0 60px;
+        @include tablet {
+            width: 690px;
+            padding: 0;
+        }
+        @include sp {
+            padding: 0 10px;
+            width: 100%;
+        }
+        p {
+            font-size: 1.6rem;
+            line-height: 23px;
+            padding-bottom: 30px;
+        }
+    }
+    .pagenation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 32px;
+        margin: 0 auto;
+        padding: 120px 60px;
+        font-size: 1.4rem;
+        line-height: 20px;
+        color: #6E6E6E;
+        @include tablet {
+            width: 690px;
+            padding: 80px 0;
+        }
+        @include sp {
+            width: 100%;
+        }
+        .prev > a , .next > a {
+            @include sp {
+                font-size: 0;
+            }
+        }
+        .prev > a::before {
+            content: "";
+            background-image: url(../../images/icon/prev.png);
+            background-size: contain;
+            width: 32px;
+            height: 32px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+            transition: background-image 0.3s ease-out;
+        }
+        .prev > a:hover::before {
+            background-image: url(../../images/icon/prev-hover.png);
+        }
+        .list {
+            border-bottom: 1px solid #6E6E6E;
+            padding: 5px;
+        }
+        .list:hover {
+            background-color: #C5C5C5;
+            border-bottom: none;
+            color: $color--white;
+            transition: all 0.3s ease-out;
+        }
+        .next > a::after {
+            content: "";
+            background-image: url(../../images/icon/next.png);
+            background-size: contain;
+            width: 32px;
+            height: 32px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 10px;
+            transition: background-image 0.3s ease-out;
+        }
+        .next > a:hover::after {
+            background-image: url(../../images/icon/next-hover.png);
+        }
+    }
+}
+
+#white {
+    background-color: $color--white;
+    border-bottom: 1px solid #000;
+}

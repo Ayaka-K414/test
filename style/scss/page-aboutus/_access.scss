@@ -1,0 +1,129 @@
+@use '../setting/base' as *;
+@use '../setting/variable' as *;
+@use '../setting/mixin' as *;
+
+
+.access {
+    width: 1168px;
+    margin: 0 auto;
+    padding-bottom: 200px;
+    @include pc {
+        width: 100%;
+        padding: 0 16px 200px;
+    }
+    @include tablet {
+        padding: 0 32px 200px;
+    }
+    @include sp {
+        padding: 0 12px 80px;
+    }
+    .access-container {
+        .section-subtitle {
+            padding-bottom: 20px;
+        }
+        .access-map {
+            text-align: center;
+            padding: 40px 0 20px 0;
+            @include tablet {
+                padding: 10px 0;
+            }
+            iframe {
+                width: 928px;
+                height: 400px;
+                border-radius: 20px;
+                border: 1px solid #000;
+                @include tablet {
+                    width: 704px;
+                    height: 296px;
+                }
+                @include sp {
+                    width: 100%;
+                    height: 154px;
+                    object-fit: cover;
+                }   
+            }
+        }
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            width: 928px;
+            margin: 0 auto;
+            @include tablet {
+                width: 704px;
+            }
+            @include sp {
+                width: 100%;
+            }
+            .access-address {
+                font-size: 1.6rem;
+                font-style: normal;
+                line-height: 23px;
+                @include sp {
+                    font-size: 1.4rem;
+                    line-height: 20.27px;
+                }
+                .text-newline {
+                    @include sp {
+                        display: block;
+                    }
+                }
+            }
+            .access-link-container {
+                margin-top: auto;
+                margin-left: auto;
+                margin-right: 0;
+                @include sp {
+                    margin-top: 30px;
+                }
+                .access-link {
+                    display: inline-block;
+                    .text {
+                        display: inline-block;
+                        font-weight: 500;
+                        font-size: 1.6rem;
+                        line-height: 23px;
+                        text-align: center;
+                        box-shadow: 0px 2px 0px 0px #FEEF44;
+                        margin-right: 20px;
+                        padding: 22px 0 5px 0;
+                        @include sp {
+                            font-size: 1.4rem;
+                            line-height: 20.27px;
+                            margin-right: 12px;
+                        }
+                    }
+                    .arrow {
+                        display: inline-block;
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                        border: 2px solid $color--yellow;
+                        text-align: center;
+                        line-height: 60px;
+                        font-size: 2rem;
+                        background-color: #F4F4F4;
+                        @include sp {
+                            width: 48px;
+                            height: 48px;
+                            line-height: 48px;
+                        }
+                    }
+                }
+                .access-link:hover .text {
+                    text-shadow: 2px 2px #FEEF44;
+                    border-bottom: 1px solid #000;
+                    transition: all 0.3s ease-out;
+                }
+                .access-link:hover .arrow {
+                    background-color: $color--yellow;
+                    border: 1px solid #000;
+                    transition: all 0.3s ease-out;
+                }
+            }    
+        }
+    }
+}
+
+#href-access {
+    scroll-margin-top: 220px;
+}

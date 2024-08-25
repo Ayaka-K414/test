@@ -1,0 +1,114 @@
+@use '../setting/base' as *;
+@use '../setting/variable' as *;
+@use '../setting/mixin' as *;
+
+
+main {
+    overflow: hidden;
+    padding-top: 173px;
+    @include tablet {
+        padding-top: 133px;
+    }
+    @include sp {
+        padding-top: 83px;
+    }
+}
+
+.u-about-us {
+    width: 1168px;
+    margin: 0 auto;
+    padding: 100px 0 155px 0;
+    @include pc {
+        width: 100%;
+        padding: 100px 16px 155px;
+    }
+    @include tablet {
+        padding: 50px 32px 155px;
+    }
+    @include sp {
+        padding: 40px 12px 80px;
+    }
+    .u-about-us-container {
+        .u-about-us-img-container {
+            background-image: url("../../images/aboutus/aboutus-main.jpg");
+            width: 1377px;
+            height: 480px;
+            border: 1px solid #000;
+            border-radius: 50%;
+            margin-left: 20%;
+            margin-top: -50px;
+            overflow: hidden;
+            background-size: 115%;
+            background-position: 70% 65%;
+            @include pc {
+                margin-left: 5%;
+            }
+            @include tablet {
+                width: 1004px;
+                height: 350px;
+                margin: 16px;
+                background-size: 120%;
+                background-position: 80% 65%;
+            }
+            @include sp {
+                width: 516px;
+                height: 180px;
+                margin: -20px auto 12px;
+            }
+        }
+        .u-about-us-text {
+            h3 {
+                font-size: 4.0rem;
+                font-weight: 700;
+                line-height: 57px;
+                color: #fff;
+                -webkit-text-stroke: 4px #000;
+                paint-order: stroke fill;
+                @include tablet {
+                    font-size: 3.2rem;
+                    line-height: 46px;
+                    letter-spacing: -0.02em;
+                } 
+                @include sp {
+                    font-size: 2.2rem;
+                    line-height: 31.86px;
+                    letter-spacing: -0.02em;
+                    text-align: left;
+                }         
+            }
+            .text-large {
+                font-size: 2.0rem;
+                line-height: 28px;
+                padding: 20px 0 10px 0;
+                @include tablet {
+                    font-size: 1.8rem;
+                    line-height: 26px;
+                    padding: 20px 0;
+                }
+                @include sp {
+                    font-size: 1.6rem;
+                    line-height: 23.17px;
+                    text-align: left;
+                }
+            }
+            .text-small {
+                font-size: 1.8rem;
+                line-height: 26px;
+                @include tablet {
+                    font-size: 1.6rem;
+                    line-height: 23px;
+                }
+                @include sp {
+                    font-size: 1.4rem;
+                    line-height: 20.27px;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
+
+#beige {
+    background-color: $color--beige;
+}

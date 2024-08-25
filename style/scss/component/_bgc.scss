@@ -1,0 +1,21 @@
+@use '../../scss/setting/mixin' as *;
+@use '../../scss/setting/variable' as *;
+
+.bgc-lightblue {
+    background-color: $color--lightblue;
+    padding-bottom: 170px;
+    @include tablet {
+        padding-bottom: 120px;
+    }
+    @include sp {
+        padding-bottom: 80px;
+    }
+}
+
+.bgc-white {
+    background-color: $color--white;
+}
+
+.bgc-beige {
+    background-color: $color--beige;
+}

@@ -1,0 +1,106 @@
+@use '../setting/base' as *;
+@use '../setting/variable' as *;
+@use '../setting/mixin' as *;
+
+
+main {
+    padding-top: 173px;
+    @include tablet {
+        padding-top: 133px;
+    }
+    @include sp {
+        padding-top: 83px;
+    }
+}
+
+.page2 {
+    background-color: $color--lightblue;
+}
+
+.u-service {
+    width: 1066px;
+    margin: 0 auto;
+    padding-top: 110px;
+    @include pc {
+        width: 100%;
+    }
+    @include tablet {
+        padding: 110px 32px 0;
+    }
+    @include sp {
+        padding: 50px 12px 0;
+    }
+    .u-service-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include tablet {
+            align-items: flex-start;
+        }
+        @include sp {
+            display: block;
+        }
+        div {
+            margin-right: 7%;
+            @include tablet {
+                margin-right: 34px;
+            }
+            @include sp {
+                margin: 0;
+            }
+            .section-subtitle {
+                padding-bottom: 70px;
+                @include tablet {
+                    padding-bottom: 40px;
+                }
+                @include sp {
+                    padding-bottom: 20px;
+                }            
+            }
+            .service-img-sp {
+                display: none;
+                @include sp {
+                    display: block;
+                    width: 280px;
+                    height: 261px;
+                    border-radius: 8px;
+                    margin: 0 auto;
+                    object-fit: cover;
+                }
+            }
+            .service-text {
+                width: 480px;
+                height: 216px;
+                font-size: 1.8rem;
+                line-height: 26px;
+                @include tablet {
+                    width: 272px;
+                }
+                @include sp {
+                    width: 100%;
+                    padding-top: 20px;
+                }
+                p {
+                    font-size: 1.8rem;
+                    line-height: 2.6rem;
+                    @include tablet {
+                        font-size: 1.6rem;
+                        line-height: 23px;
+                    }
+                }
+            }
+        }
+        .service-img-pc {
+            width: 490px;
+            height: 546px;
+            object-fit: cover;
+            border-radius: 20px;
+            @include tablet {
+                height: 466px;
+            }
+            @include sp {
+                display: none;
+            }
+        }
+    }
+}

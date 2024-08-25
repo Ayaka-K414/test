@@ -1,0 +1,204 @@
+@use '../setting/base' as *;
+@use '../setting/variable' as *;
+@use '../setting/mixin' as *;
+
+
+.article {
+    background-color: $color--lightblue;
+    padding-bottom: 120px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @include tablet {
+        align-items: center;
+        padding-bottom: 0;
+    }
+    .article-container {
+        margin-bottom: 100px;
+        width: 100%;
+        .title-flex {
+            display: flex;
+            justify-content: center;
+            @include sp {
+                flex-direction: column;
+            }
+            .vertical-title {
+                writing-mode: vertical-rl;
+                text-orientation: sideways;
+                transform: rotate(180deg);
+                height: 476px;
+                color: #fff;
+                -webkit-text-stroke: 3px rgba($color: #6E6E6EB2, $alpha: 0.7);
+                paint-order: stroke fill;
+                font-size: 6.4rem;
+                font-weight: 700;
+                line-height: 92px;
+                text-align: center;
+                @include tablet {
+                    height: 360px;
+                    font-size: 4.8rem;
+                    line-height: 69px;
+                }
+                @include sp {
+                    font-size: 3.2rem;
+                    line-height: 46px;
+                    writing-mode: horizontal-tb;
+                    text-orientation: mixed;
+                    transform: none;
+                    height: auto;
+                    padding: 0 0 8px 0;
+                    text-align: right;
+                    position: relative;
+                    z-index: 1;
+                    margin-right: 12px;
+                }
+            }
+            .service-content {
+                border: 1px solid #000;
+                border-radius: 20px;  
+                background-color: $color--white;
+                width: 950px;
+                height: 476px;
+                padding: 35px;
+                margin-left: 6px;
+                @include pc {
+                    width: 900px;
+                }
+                @include tablet {
+                    width: 678px;
+                    height: 360px;
+                    padding: 20px 14px 40px 30px;
+                    margin-left: 14px;
+                }
+                @include sp {
+                    width: 100%;
+                    height: auto;
+                    padding: 16px 4px 45px 4px;
+                    margin: 0;
+                    border-radius: 0;
+                    border-top: none;
+                    border-left: none;
+                    border-right: none;
+                    margin-top: -25px;
+                }
+                h4 {
+                    font-size: 3.2rem;
+                    font-weight: 700;
+                    line-height: 46px;
+                    padding-bottom: 30px;
+                    @include tablet {
+                        font-size: 2.8rem;
+                        line-height: 40px;
+                        padding-bottom: 16px;
+                    }
+                    @include sp {
+                        font-size: 2.4rem;
+                        line-height: 34.75px;
+                    }
+                }
+                figure {
+                    display: flex;
+                    @include sp {
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    .flex-img {
+                        display: flex;
+                        padding-right: 40px;
+                        @include tablet {
+                            padding-right: 6px;
+                        }
+                        @include sp {
+                            padding-right: 0;
+                        }
+                        img {
+                            width: 300px;
+                            height: 330px;
+                            border-radius: 20px;
+                            object-fit: cover;
+                            @include tablet {
+                                width: 216px;
+                                height: 238px;
+                                border-radius: 8px;
+                            }
+                        }
+                        .obj-position-left {
+                            object-position: left;
+                        }
+                        .obj-position-right {
+                            object-position: 72%;
+                        }
+                        .img-small {
+                            display: flex;
+                            flex-direction: column;
+                            margin-left: 16px;
+                            @include tablet {
+                                margin-left: 6px;
+                                border-radius: 8px;
+                            }
+                            img {
+                                width: 196px;
+                                height: 160px;
+                                border-radius: 20px;
+                                @include tablet {
+                                    width: 144px;
+                                    height: 116px;
+                                    border-radius: 8px;
+                                }
+                            }
+                            img:first-of-type {
+                                margin-bottom: 10px;
+                                @include tablet {
+                                    margin-bottom: 6px;
+                                }
+                            }
+                        }
+                    }
+                }
+                figcaption {
+                    width: 350px;
+                    height: 225px;
+                    @include sp {
+                        width: 100%;
+                        height: auto;
+                    }
+                    .figcaption-title {
+                        font-size: 2.0rem;
+                        font-weight: 500;
+                        line-height: 28px;
+                        padding: 20px 0;
+                        @include tablet {
+                            font-size: 1.8rem;
+                            line-height: 26px;
+                            padding: 16px 0 20px 0;
+                        }
+                    }
+                    p {
+                        font-size: 1.8rem;
+                        line-height: 26px;
+                        @include tablet {
+                            font-size: 1.6rem;
+                            line-height: 23px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#href-repair {
+    scroll-margin-top: 200px;
+}
+
+#href-maintenance {
+    scroll-margin-top: 200px;
+}
+
+#href-sale {
+    scroll-margin-top: 200px;
+}
+
+#href-custom {
+    scroll-margin-top: 200px;
+}

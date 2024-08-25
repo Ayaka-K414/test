@@ -1,0 +1,9 @@
+@use '../../scss/setting/mixin' as *;
+@use '../../scss/setting/variable' as *;
+
+.mgr {
+    margin-right: 5px;
+    @include sp {
+        margin-right: 3px;
+    }
+}

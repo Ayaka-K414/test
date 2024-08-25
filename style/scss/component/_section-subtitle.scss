@@ -1,0 +1,20 @@
+@use '../../scss/setting/mixin' as *;
+@use '../../scss/setting/variable' as *;
+
+.section-subtitle {
+    font-size: 2.6rem;
+    font-weight: 500;
+    line-height: 37px;
+    padding-bottom: 36px;
+    @include tablet {
+        font-size: 2.0rem;
+        line-height: 28px;
+        padding-bottom: 20px;
+
+    }
+    @include sp {
+        font-size: 1.2rem;
+        line-height: 17.38px;
+        text-align: left;
+    }
+}

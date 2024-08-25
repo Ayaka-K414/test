@@ -1,0 +1,226 @@
+@use '../setting/base' as *;
+@use '../setting/variable' as *;
+@use '../setting/mixin' as *;
+
+
+.bgc-beige {
+    overflow: hidden;
+    // @include tablet {
+    //     margin-top: -22px;
+    // }
+}
+
+.about-us {
+    width: 1168px;
+    margin: 0 auto;
+    @include pc {
+        width: 100%;
+    }
+    .about-us-container {
+        display: flex;
+        padding: 142px 0 29px 0;
+        @include tablet {
+            padding: 119px 32px 29px 32px;
+        }
+        @include sp {
+            padding: 67px 13px;
+            display: block;
+        }
+        div {
+            padding-right: 40px;
+            padding-left: 5px;
+            @include tablet {
+                padding-right: 0;
+            }
+            .about-us-text {
+                width: 479px;
+                height: 390px;
+                font-size: 1.6rem;
+                line-height: 24px;
+                background-color: $color--white;
+                padding: 40px 56px 36px 56px;
+                border: 1px solid #000;
+                border-radius: 20px;
+                @include tablet {
+                    background-color: $color--beige;
+                    border: none;
+                    width: 100%;
+                    height: auto;
+                    padding: 20px 0;
+                }
+                p {
+                    padding-bottom: 50px;
+                    @include tablet {
+                        padding-bottom: 20px;
+                    }
+                }
+                .about-us-link-container {
+                    @include tablet {
+                        text-align: right;                        
+                    }
+                    @include sp {
+                        padding-right: 35px;
+                    }
+                    .about-us-link {
+                        display: inline-block;
+                        .text {
+                            display: inline-block;
+                            font-weight: 500;
+                            line-height: 23px;
+                            text-align: center;
+                            box-shadow: 0px 2px 0px 0px #FEEF44;
+                            margin-right: 20px;
+                            padding: 22px 0 0 0;
+                            @include sp {
+                                font-size: 1.4rem;
+                                line-height: 20px;
+                                margin-right: 12px;
+                            }
+                        }
+                        .arrow {
+                            display: inline-block;
+                            width: 60px;
+                            height: 60px;
+                            border-radius: 50%;
+                            border: 2px solid $color--yellow;
+                            text-align: center;
+                            line-height: 60px;
+                            font-size: 2rem;
+                            background-color: #F4F4F4;
+                            @include sp {
+                                width: 48px;
+                                height: 48px;
+                                line-height: 46px;
+                                font-size: 1.6rem;
+                                padding: 0;
+                            } 
+                        }
+                    }
+                    .about-us-link:hover .text {
+                        text-shadow: 2px 2px $color--yellow;
+                        border-bottom: 1px solid #000;
+                        transition: all 0.3s ease-out;
+                    }
+                    .about-us-link:hover .arrow {
+                        border: 1px solid #000;
+                        background-color: $color--yellow;
+                        transition: all 0.3s ease-out;
+                    }                    
+                }
+            }
+        }
+        .about-us-img-pc {
+            width: 994px;
+            height: 624px;
+            border-radius: 50%;
+            border: 1px solid #000;
+            @include tablet {
+                display: none;
+            }
+        }
+        .about-us-img-tablet {
+            .about-us-img-tab {
+                display: none;
+                @include tablet {
+                    display: block;
+                    width: 684px;
+                    height: 420px;
+                    border: 1px solid #000;
+                    border-radius: 50%;
+                    margin-left: 30%;
+                    margin-top: -100px;
+                }
+                @include sp {
+                    width: 488px;
+                    height: 300px;
+                    margin: -40px auto 0;
+                    // object-position: 0 0;効かない
+                }
+            }
+        }
+    }
+    .feature {
+        width: 57%;
+        margin: 0 auto;
+        min-width: 820px;
+        padding-bottom: 115px;
+        @include tablet {
+            min-width: 680px;
+            padding-bottom: 60px;
+        }
+        @include sp {
+            width: 92vw;
+            min-width: 92vw;
+        }
+        .feature-title {
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 43px;
+            color: #F4F4F4;
+            text-shadow: 1px 1px 0 #000,-1px 1px 0 #000,-1px -1px 0 #000,1px -1px 0 #000,1.8px 1.8px 0 $color--yellow;
+            @include sp {
+                font-size: 1.8rem;
+                line-height: 26.06px;
+                letter-spacing: 0.04em;
+            }
+        }
+        .feature-link {
+            display: block;
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: 23px;
+            text-align: center;
+            background-color: $color--white;
+            border: 2px solid $color--yellow;
+            border-radius: 20px;
+            box-shadow: 3px 3px 0px 0px #B6AAA0;   
+            padding: 10px 0;
+            @include tablet {
+                font-size: 1.4rem;
+                line-height: 20.27px;
+                text-align: center;
+            }
+            &:hover {
+                border: 1px solid #000;
+                background-color: $color--yellow;
+                box-shadow: none;
+                transition: all 0.3s ease-out;
+
+            }
+            @include tablet {
+                font-size: 1.4rem;
+                border-radius: 8px;
+            }
+            span {
+                font-size: 1.6rem;
+                font-weight: 700;
+                line-height: 23.17px;
+                text-align: center;
+                @include tablet {
+                    font-size: 1.4rem;
+                    line-height: 20.27px;
+                    text-align: center;
+                }
+                @include sp {
+                    display: block;
+                }
+            }
+            span::before {
+                content: ">>";
+                margin-right: 16px;
+                margin-left: 32px;
+                height: 30px;
+            }
+            span::after {
+                content: "";
+                display: inline-block;
+                width: 18px;
+                height: 18px;
+                background-image: url("../../images/icon/new-window-icon.png");
+                background-size: contain;
+                vertical-align: middle;
+                margin-left: 16px;
+            }
+        }
+    }
+}

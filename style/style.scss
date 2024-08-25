@@ -1,0 +1,42 @@
+// ベーススタイリング
+@use "scss/setting/base";
+
+// ブレイクポイント（mixin）とカラー変数（variable）
+@use "scss/setting/mixin";
+@use "scss/setting/variable";
+
+// 共通パーツスタイリング
+@use "scss/header";
+@use "scss/footer";
+
+// component
+@use "scss/component/section-title";
+@use "scss/component/section-subtitle";
+@use "scss/component/mg";
+@use "scss/component/bgc";
+
+// front-page
+@use "scss/front-page/about-us";
+@use "scss/front-page/main-visual";
+@use "scss/front-page/service";
+@use "scss/front-page/works";
+@use "scss/front-page/instagram";
+
+// page
+@use "scss/page-aboutus/u-about-us";
+@use "scss/page-aboutus/company";
+@use "scss/page-aboutus/access";
+@use "scss/page-aboutus/contact";
+
+// page2
+@use "scss/page-service/service-contents";
+@use "scss/page-service/u-service";
+
+// archive
+@use "scss/archive/u-works";
+
+// single
+@use "scss/single/post";
+
+// 404
+@use "scss/not-found";

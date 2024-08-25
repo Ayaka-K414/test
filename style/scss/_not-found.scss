@@ -1,0 +1,63 @@
+@use "../scss/setting/mixin" as *;
+@use "../scss/setting/variable" as *;
+
+main {
+    padding-top: 173px;
+    @include tablet {
+        padding-top: 133px;
+    }
+    @include sp {
+        padding-top: 82px;
+    }
+}
+
+.not-found {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 0 200px 0;
+    @include tablet {
+        padding: 70px 0 120px 0;
+    }
+    @include sp {
+        padding: 50px 0 120px 0;
+    }
+    .section-title, .section-subtitle {
+        @include sp {
+            text-align: center;
+        }
+    }
+    .not-found-text {
+        font-size: 1.8rem;
+        line-height: 26.06px;
+        margin: 30px 0 40px 0;
+        @include tablet {
+            font-size: 1.6rem;
+            line-height: 23px;
+        }
+    }
+    .btn {
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 23.17px;
+        text-align: center;
+        background-color: #F4F4F4;
+        border: 2px solid $color--yellow;
+        padding: 26px 128px 26px 128px;
+        border-radius: 8px;
+        box-shadow: 1px 1px 0px 0px #C6B2A0;
+        @include tablet {
+            padding: 18px 56px 19px 56px;
+        }
+        a {
+            display: block;
+        }
+    }
+    .btn:hover {
+        background-color: $color--yellow;
+        border: 2px solid #000;
+        transition: all 0.3s ease-out;
+        cursor: pointer;
+    }
+}

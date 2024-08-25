@@ -1,0 +1,250 @@
+@use '../setting/base' as *;
+@use '../setting/variable' as *;
+@use '../setting/mixin' as *;
+
+
+.works {
+  background-color: $color--lightblue;
+  width: 1168px;
+  margin: 0 auto;
+  @include pc {
+    width: 100%;
+    max-width: 1025px;
+  }
+  @include tablet {
+    padding: 0 32px;
+    max-width: 769px;
+  }
+  @include sp {
+    padding: 0 12px;
+    max-width: 376px;
+  }
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    .works-link-container {
+      margin-top: auto;
+      .works-link {
+        display: inline-block;
+        .text {
+          display: inline-block;
+          font-weight: 500;
+          font-size: 1.6rem;
+          line-height: 23px;
+          text-align: center;
+          box-shadow: 0px 2px 0px 0px #feef44;
+          margin-right: 20px;
+          padding: 22px 0 0 0;
+        }
+        .arrow {
+          display: inline-block;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          border: 2px solid $color--yellow;
+          text-align: center;
+          line-height: 60px;
+          font-size: 2rem;
+          background-color: #f4f4f4;
+        }
+      }
+      .works-link:hover .text {
+        text-shadow: 2px 2px $color--yellow;
+        border-bottom: 1px solid #000;
+        transition: all 0.3s ease-out;
+      }
+      .works-link:hover .arrow {
+        border: 1px solid #000;
+        background-color: $color--yellow;
+        transition: all 0.3s ease-out;
+      }
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 40px;
+    max-width: 1440px;
+    margin: 0 auto;
+    @include pc {
+      flex-wrap: wrap;
+      width: 880px;
+    }
+    @include tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      width: 605px;
+    }
+    @include sp {
+      padding-top: 0;
+      width: 360px;
+    }
+    figure {
+      width: 350px;
+      height: 466px;
+      border-radius: 20px;
+      border: 1px solid #000;
+      margin: 0 40px 32px 0;
+      background-color: $color--white;
+      @include pc {
+        flex: 0 0 352px;
+      }
+      @include tablet {
+        width: 172px;
+        height: 230px;
+        border-radius: 8px;
+        flex: 0 0 174px;
+      }
+      @include sp {
+        margin: 0 6px 12px 0;
+      }
+      &:hover {
+        background-color: $color--yellow;
+        transition: all 0.3s ease-out;
+      }
+      &:nth-of-type(3n) {
+        margin-right: 0;
+        @include pc {
+          margin-right: 40px;
+        }
+        @include tablet {
+          margin-right: 0;
+        }
+        @include sp {
+          margin-right: 6px;
+        }
+      }
+      &:nth-of-type(2n) {
+        @include pc {
+          margin-right: 0;
+        }
+        @include tablet {
+          margin-right: 40px;
+        }
+        @include sp {
+          margin-right: 0;
+        }
+      }
+      &:last-of-type {
+        @include tablet {
+          margin-right: 0;
+        }
+      }
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 330px;
+        border-radius: 20px 20px 0 0;
+        border-bottom: 1px solid #000;
+        @include tablet {
+          height: 152px;
+          border-radius: 8px 8px 0 0;
+        }
+      }
+      figcaption {
+        padding: 14px 12px;
+        @include tablet {
+          padding: 8px 1px;
+        }
+        .card-title {
+          display: inline-block;
+          background-color: $color--green;
+          font-size: 1.6rem;
+          line-height: 23px;
+          padding: 5px;
+          margin-bottom: 10px;
+          @include tablet {
+            font-size: 1.2rem;
+            line-height: 17px;
+            padding: 2px;
+          }
+        }
+        .card-text {
+          font-size: 1.6rem;
+          line-height: 23px;
+          @include tablet {
+            font-size: 1rem;
+            line-height: 14px;
+          }
+        }
+        .card-text-center {
+          font-size: 1.6rem;
+          line-height: 23px;
+          padding: 34px 0;
+          text-align: center;
+          @include tablet {
+            font-size: 1rem;
+            line-height: 14px;
+            padding: 20px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.works-link-container-tablet {
+  display: none;
+  @include tablet {
+    display: block;
+    display: flex;
+    justify-content: flex-end;
+    width: 580px;
+    margin: 0 auto;
+  }
+  @include sp {
+    width: 100%;
+    padding-right: 35px;
+  }
+  .works-link-tablet {
+    display: inline-block;
+    .text {
+      display: inline-block;
+      font-weight: 500;
+      font-size: 1.6rem;
+      line-height: 23px;
+      text-align: center;
+      box-shadow: 0px 2px 0px 0px #feef44;
+      margin-right: 20px;
+      padding: 22px 0 0 0;
+      @include sp {
+        font-size: 1.4rem;
+        line-height: 20px;
+        margin-right: 12px;
+      }
+    }
+    .arrow {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 2px solid $color--yellow;
+      text-align: center;
+      line-height: 60px;
+      font-size: 2rem;
+      background-color: #f4f4f4;
+      @include sp {
+        width: 48px;
+        height: 48px;
+        line-height: 46px;
+        font-size: 1.6rem;
+        padding: 0;
+      }
+    }
+  }
+  .works-link-tablet:hover .text {
+    text-shadow: 2px 2px $color--yellow;
+    border-bottom: 1px solid #000;
+    transition: all 0.3s ease-out;
+  }
+  .works-link-tablet:hover .arrow {
+    border: 1px solid #000;
+    background-color: $color--yellow;
+    transition: all 0.3s ease-out;
+  }
+}

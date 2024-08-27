@@ -70,7 +70,7 @@
             </li>
           </ul>
         </li>
-        <li><a href="<?php echo esc_url( get_category_link( get_cat_ID( 'works' ) ) ); ?>">施工実績</a></li>
+        <li><a href="<?php echo esc_url( get_post_type_archive_link('works') ); ?>">施工実績</a></li>
         <li><a href="<?php echo esc_url( get_permalink( get_page_by_path('aboutus')->ID ) ); ?>#href-contact">お問い合わせ</a></li>
       </ul>
       <div class="instagram-link-container">

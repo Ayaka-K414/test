@@ -66,9 +66,11 @@
         position: relative;
         @include tablet {
             font-size: 7rem;
+            line-height: 70px;
         }
         @include sp {
             font-size: 4.2rem;
+            line-height: 40px;
         }
     }
     .section-title-shadow::before {
@@ -95,8 +97,13 @@
     }
     .section-subtitle {
         text-align: center;
+        padding-top: 24px;
         padding-bottom: 50px;
+        @include tablet {
+            padding-top: 8px;
+        }
         @include sp {
+            padding-top: 4px;
             padding-bottom: 30px;
         }
     }

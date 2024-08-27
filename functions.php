@@ -8,7 +8,6 @@ function remove_menus() {
     remove_menu_page( 'edit.php' ); // 投稿
     remove_menu_page( 'edit.php?post_type=page' ); // 固定ページ
     remove_menu_page( 'edit-comments.php' ); // コメント
-    remove_menu_page( 'themes.php' ); // 外観
     }
     add_action( 'admin_menu', 'remove_menus', 999 );
 

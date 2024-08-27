@@ -116,11 +116,6 @@ header .hamburger-button {
 
 .menu {
   display: none;
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  background-color: #FAF2EB;
-  z-index: 10;
 }
 .menu .text-align-right {
   text-align: right;
@@ -148,12 +143,12 @@ header .hamburger-button {
 
 @media screen and (max-width: 1023px) {
   .menu.is-active {
-    overflow: auto;
-    position: relative;
-    z-index: 10;
     display: block;
+    position: fixed;
+    z-index: 10;
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
+    overflow: auto;
     background-color: #FAF2EB;
   }
   .menu.is-active .menu-list {
@@ -2141,11 +2136,13 @@ main {
 @media screen and (max-width: 1023px) {
   .contact .section-title-shadow {
     font-size: 7rem;
+    line-height: 70px;
   }
 }
 @media screen and (max-width: 767px) {
   .contact .section-title-shadow {
     font-size: 4.2rem;
+    line-height: 40px;
   }
 }
 .contact .section-title-shadow::before {
@@ -2176,10 +2173,17 @@ main {
 }
 .contact .section-subtitle {
   text-align: center;
+  padding-top: 24px;
   padding-bottom: 50px;
+}
+@media screen and (max-width: 1023px) {
+  .contact .section-subtitle {
+    padding-top: 8px;
+  }
 }
 @media screen and (max-width: 767px) {
   .contact .section-subtitle {
+    padding-top: 4px;
     padding-bottom: 30px;
   }
 }

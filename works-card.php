@@ -9,7 +9,8 @@
 
         <figcaption>
             <p class="card-title"><?php the_field('tag_text'); ?></p>
-            <p class="card-text"><?php the_field('excerpt'); ?></p>
+            <p class="card-text"><?php the_field('excerpt_up'); ?></p>
+            <p class="card-text"><?php the_field('excerpt_low'); ?></p>
         </figcaption>
     </a>
 </figure>

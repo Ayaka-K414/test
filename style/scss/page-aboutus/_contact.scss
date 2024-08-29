@@ -2,7 +2,6 @@
 @use '../setting/variable' as *;
 @use '../setting/mixin' as *;
 
-
 .contact-bg-top {
     background-image: url("../../images/background/contact/contact-high1440.jpg");
     background-position: center;
@@ -22,6 +21,7 @@
         height: 200px;
     }
 }
+
 .contact-bg-bottom {
     background-image: url("../../images/background/contact/contact-bottom1440.jpg");
     background-position: center;
@@ -41,13 +41,13 @@
         height: 50px;
     }
 }
+
 .bgc-beige {
     padding-bottom: 100px;
     @include tablet {
         padding-bottom: 30px;
     }
 }
-
 
 .contact {
     margin-top: -280px;
@@ -79,7 +79,7 @@
         top: 0;
         color: $color--white;
         -webkit-text-stroke: 3px black;
-        text-shadow: 4px 4px 2px $color--green; /* 緑のシャドウ */
+        text-shadow: 4px 4px 2px $color--green;
         font-size: inherit;
         font-weight: inherit;
         line-height: inherit;
@@ -87,12 +87,12 @@
         @include tablet {
             font-size: 7rem;
             -webkit-text-stroke: 2px black;
-            text-shadow: 3px 3px 1px $color--green; /* 緑のシャドウ */    
+            text-shadow: 3px 3px 1px $color--green;
         }
         @include sp {
             font-size: 4.2rem;
             -webkit-text-stroke: 2px black;
-            text-shadow: 3px 3px 1px $color--green; /* 緑のシャドウ */    
+            text-shadow: 3px 3px 1px $color--green;
         }
     }
     .section-subtitle {

@@ -2,7 +2,6 @@
 @use '../setting/variable' as *;
 @use '../setting/mixin' as *;
 
-
 main {
     overflow: hidden;
     padding-top: 173px;
@@ -107,7 +106,6 @@ main {
         }
     }
 }
-
 
 #beige {
     background-color: $color--beige;

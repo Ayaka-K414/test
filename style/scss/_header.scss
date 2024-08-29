@@ -84,7 +84,13 @@ header.is-active {
 }
 
 .menu {
-  display: none;
+  position: fixed;
+  top: 0;
+  left: -120%;
+  width: 100vw;
+  height: 100dvh;
+  z-index: 10;
+  background-color: $color--beige;
   .text-align-right {
     text-align: right;
     .close-button {
@@ -112,14 +118,12 @@ header.is-active {
 
 .menu.is-active {
   @include tablet {
-    display: block;
     position: fixed;
+    left: 0;
     z-index: 10;
     width: 100vw;
-    // height: -webkit-fill-available;
     height: 100dvh;
     overflow: auto;
-    background-color: $color--beige;
     .menu-list {
       display: flex;
       align-items: flex-end;

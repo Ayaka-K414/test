@@ -1,7 +1,6 @@
-@use '../setting/base' as *;
-@use '../setting/variable' as *;
-@use '../setting/mixin' as *;
-
+@use "../setting/base" as *;
+@use "../setting/variable" as *;
+@use "../setting/mixin" as *;
 
 .works {
   background-color: $color--lightblue;

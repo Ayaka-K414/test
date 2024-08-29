@@ -2,7 +2,6 @@
 @use '../setting/variable' as *;
 @use '../setting/mixin' as *;
 
-
 main {
   padding-top: 173px;
   @include tablet {
